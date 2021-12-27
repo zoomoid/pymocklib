@@ -26,6 +26,7 @@ def to_upper_by(mask: list[bool]):
         return reduce(g, list(t), ("", mask))[0]
     return h
 
+
 def to_alternating(t: str) -> str:
     """
     Transforms a string into alternating capitalization
@@ -33,6 +34,13 @@ def to_alternating(t: str) -> str:
     # we cannot simply use repeat from haskell which creates an infinite list
     # thus we need a custom iterator for that
     return to_upper_by(list(alternating_mask_iterator(n=len(t))))(t)
+
+def to_alternating_alt(t: str):
+    """
+    decorates the to_alternating flavor with a slightly more regular version
+    by setting all characters to lowercase before applying the masking reduce
+    """
+    return to_alternating(t.lower())
 
 def to_random(t: str) -> str:
     """
