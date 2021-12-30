@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Callable, Tuple
 from helpers import alternating_mask_iterator, intercalate, intersperse, random_mask_iterator
 from functools import reduce
 
@@ -317,7 +317,7 @@ def to_square(t: str) -> str:
 """
 All available flavors of this library exported
 """
-styles = [
+styles: list[Tuple[str, Callable[[str], str]]] = [
     ("random", to_random),
     ("alternating", to_alternating),
     ("alternating2", to_alternating_alt),
