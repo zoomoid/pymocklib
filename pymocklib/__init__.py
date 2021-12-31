@@ -110,7 +110,7 @@ def from_double(t: str) -> str:
                 elif 120146 <= c and c <= 120171:
                     return chr(c - 120146 + 97)
                 else:
-                    return chr(char)
+                    return chr(c)
     return intercalate("", [f(char) for char in list(t)])
 
 def to_small_caps(t: str) -> str:
