@@ -1,5 +1,5 @@
 from typing import Callable, Tuple
-from helpers import alternating_mask_iterator, intercalate, intersperse, random_mask_iterator
+from lib.helpers import alternating_mask_iterator, random_mask_iterator, intercalate, intersperse
 from functools import reduce
 
 def to_upper_by(mask: list[bool]):
@@ -350,7 +350,7 @@ def style_doc(key: str) -> str:
         case "random": return "Flips lowercase characters pseudo-randomly into uppercase letters."
         case "alternating": return "Flips every second letter into an uppercase one, starting with the second character."
         case "alternating2": return "Like alternate, but ignores case in the input. Equivalent to lower|alternate."
-        case "strike": return "Turns the input into strikethrough using Unicode combinators (e̶x̶a̶m̶p̶l̶e̶)."
+        case "strikethrough": return "Turns the input into strikethrough using Unicode combinators (e̶x̶a̶m̶p̶l̶e̶)."
         case "double": return "Turns characters (latin letters and numbers) into their double-struck variants (𝕖𝕩𝕒𝕞𝕡𝕝𝕖). Also known as blackboard bold."
         case "dedouble": return "Turns double-struck characters (like from the \"double\" style) back into normal ones."
         case "smallcaps": return "Turns lowercase letters into small capitals."
@@ -370,3 +370,6 @@ def style_doc(key: str) -> str:
         case "wordlines": return "Puts each word on a single line."
         case "square": return "Shows the input spaced in the first line and the tail of the input lined afterwards."
         case _: return "No documentation available."
+
+if __name__ == "__main__":
+    print("\n".join(["Here's what I can do:", ""] + [f"{name}: {style_doc(name)}" for (name, _) in styles]))
