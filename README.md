@@ -2,6 +2,10 @@
 
 This is a Python 3.10 port of <https://git.eisfunke.com/software/mock/>, a library for manipulating human-readable message strings.
 
+> _Disclaimer_: This library has **nothing to do with mocking in the software development world**. Rather, it takes mocking
+> in a more literal sense of _mocking sth. or someone_. I want to excuse any confusion that arises from the somewhat
+> overloaded term of _mocking_
+
 It does stuff like this:
 
 ```python
