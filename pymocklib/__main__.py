@@ -1,5 +1,5 @@
 from typing import Callable, Tuple
-from lib.helpers import alternating_mask_iterator, random_mask_iterator, intercalate, intersperse
+from pymocklib.helpers import alternating_mask_iterator, random_mask_iterator, intercalate, intersperse
 from functools import reduce
 
 def to_upper_by(mask: list[bool]):

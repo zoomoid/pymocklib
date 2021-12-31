@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text(encoding="utf-8")
 # This call to setup() does all the work
 setup(
     name="pymocklib",
-    version="1.0.0",
+    version="1.0.1",
     description="A PYthON 3.10 lib thaT will MAkE you APpEAR WEaK ANd BUTT-HUrT on THe inTeRNET",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -23,7 +23,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.10",
     ],
-    packages=["lib"],
+    packages=["pymocklib"],
     include_package_data=True,
     install_requires=[],
 )
