@@ -2,7 +2,7 @@ from typing import Callable, Tuple
 from pymocklib.helpers import alternating_mask_iterator, random_mask_iterator, intercalate, intersperse
 from functools import reduce
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 def to_upper_by(mask: list[bool]):
     """
