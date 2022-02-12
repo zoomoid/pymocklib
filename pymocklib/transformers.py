@@ -174,11 +174,13 @@ def to_pseudo_cyrillic(t: str) -> str:
             case _: return char
     return intercalate("", [f(char) for char in list(t)])
 
-def to_pray(t: str) -> str:
-    return intercalate("🙏", t.split())
-
-def to_clap(t: str) -> str:
-    return intercalate("👏", t.split())
+def to_emoji(e: str):
+    """
+    Takes a character, preferably an emoji as input and returns a function that inserts that character inbetween each word
+    """
+    def _to_emoji(t: str) -> str:
+        return intercalate(e, t.split())
+    return _to_emoji
 
 def to_lines(t: str) -> str:
     return intersperse("\n", t)
@@ -313,3 +315,9 @@ def to_square(t: str) -> str:
     Makes a square of a string by putting it with spaces in the first line and then all characters except the first in single lines after that first line.
     """
     return intersperse(' ', t) + "\n" + intercalate("\n", [t[1:][n:n+1] for n in range(len(t) - 1)])
+
+def to_pedantic(t: str) -> str:
+    """
+    Emphasizes your message like this: 'go by bus' -> 'Go. By. Bus.'
+    """
+    return intercalate('. ', list(map(lambda w: w[0].upper() + w[1:], t.split()))) + ('.' if not t.endswith('.') else '')

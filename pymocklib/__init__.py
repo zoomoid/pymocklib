@@ -21,14 +21,16 @@ styles: list[Tuple[str, Callable[[str], str]]] = [
     ("subsuper", to_sub_super),
     ("cc", to_cc),
     ("b", to_b),
-    ("pray", to_pray),
-    ("clap", to_clap),
+    ("pray", to_emoji("👏")),
+    ("clap", to_emoji("🙏")),
     ("space", to_space(1)),
     ("space2", to_space(2)),
     ("space3", to_space(3)),
     ("lines", to_lines),
     ("wordlines", to_word_lines),
     ("square", to_square),
+    ("pedantic", to_pedantic),
+    ("repeated_emoji", to_emoji)
 ]
 
 def style_doc(key: str) -> str:
@@ -58,4 +60,6 @@ def style_doc(key: str) -> str:
         case "lines": return "Puts each character on a single line."
         case "wordlines": return "Puts each word on a single line."
         case "square": return "Shows the input spaced in the first line and the tail of the input lined afterwards."
+        case "pedantic": return "Makes. Every. Message. Looks. Like. This. - The trailing period is mandatory to express your vigor."
+        case "emoji": return "Inserts a given emoji inbetween each word. The abstraction of 'pray' and 'clap'"
         case _: return "No documentation available."
