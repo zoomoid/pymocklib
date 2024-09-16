@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pymocklib"
+version = "1.0.4"
+description = "A PYthON 3.10 lib thaT will MAkE you APpEAR WEaK ANd BUTT-HUrT on THe inTeRNET"
+authors = ["Alexander Bartolomey <github@alexanderbartolomey.de>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include="pymocklib"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
