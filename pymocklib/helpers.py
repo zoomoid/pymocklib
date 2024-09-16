@@ -31,7 +31,7 @@ def alternating_mask_iterator(n: int | None = None):
     v = False
     i = 0
     while True:
-        if n == None or i >= n:
+        if n != None and i >= n:
             break
         yield v
         v = not v
@@ -45,7 +45,7 @@ def random_mask_iterator(seed, n: int | None = None):
     random.seed(seed)
     i = 0
     while True:
-        if n == None or i >= n:
+        if n != None and i >= n:
             break
         yield not not random.getrandbits(1)
         i += 1
