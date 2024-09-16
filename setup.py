@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text(encoding="utf-8")
 # This call to setup() does all the work
 setup(
     name="pymocklib",
-    version="1.0.3",
+    version="1.0.4",
     description="A PYthON 3.10 lib thaT will MAkE you APpEAR WEaK ANd BUTT-HUrT on THe inTeRNET",
     long_description=README,
     long_description_content_type="text/markdown",
