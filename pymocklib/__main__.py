@@ -1,4 +1,6 @@
-from pymocklib.transformers import style_doc, styles
+
+from pymocklib import styles
+from pymocklib.styles import style_doc
 
 
 if __name__ == "__main__":

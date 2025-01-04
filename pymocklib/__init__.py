@@ -1,1 +1,4 @@
-__version__ = "1.1.0"
+from .transformers import *
+from .styles import *
+
+__version__ = "1.1.1"
